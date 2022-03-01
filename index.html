@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="background-color: #525174;" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="./src/Map.jsx"></script>
+  </head>
+  <body style="background-size:cover; height: 100%; width: 100%; background-repeat: no-repeat; background: linear-gradient(180deg, rgba(255,255,255,1) 19%, rgba(121,148,150,1) 55%, rgba(82,81,116,1) 77%);">
+    <div style="min-height: 100%" id="app"></div>
+    <div id="map" style="width: 700px; height: 500px; margin-top: 2rem; margin-left: 10rem; margin-bottom: 5rem;"></div>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300&display=swap" rel="stylesheet">
+    <script>
+      function initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 33.7507068, lng: -111.7864448 },
+        zoom: 1,
+      });
+  }
+    </script>
+    <script async defer
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl4-gKo7AKd737uS-dUyzGsQFngwguTxc&libraries=places&callback=initMap"
+    >
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
